@@ -1,0 +1,20 @@
+.section-4 {
+  padding-top: 100px;
+  .card-body {
+    img {
+      position: relative;
+      width: 100%;
+    }
+  }
+  .card {
+    border-radius: 25px;
+    box-shadow: 0px 0px 40px -15px #cfcfcf;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    .card-image-top {
+      width: 30vw;
+      max-width: 166px;
+    }
+  }
+}

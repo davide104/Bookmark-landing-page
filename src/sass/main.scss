@@ -1,0 +1,15 @@
+//globals
+@import "global";
+@import "variables";
+@import "mixin";
+@import "customize-bootstrap";
+@import "custom-media"; //utils
+@import "./utils/image";
+
+//sections
+@import "./sections/navbar";
+@import "./sections/section-1-2-3";
+@import "./sections/section-4";
+@import "./sections/section-5";
+@import "./sections/section-6";
+@import "./sections/footer";

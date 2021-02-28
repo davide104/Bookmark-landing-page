@@ -1,0 +1,80 @@
+@import "variables";
+/*
+==============================
+components colors
+==============================*/
+//btn
+.btn-primary {
+  background-color: $color-soft-blue;
+  border-color: $color-soft-blue;
+}
+.btn-danger {
+  background-color: $color-soft-red;
+  border-color: $color-soft-red;
+}
+
+.bg-light {
+  background-color: white !important;
+}
+
+.btn-outline-light {
+  color: white;
+  border: 3px solid white;
+  letter-spacing: 2px;
+}
+
+/*
+==============================
+bootstrap components
+==============================*/
+//navbar
+.navbar {
+  padding: 1rem 0px;
+}
+
+//container
+.container-md {
+  padding: 0px 32px;
+}
+.container-fluid {
+  padding: 0px 32px;
+}
+
+//grid
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.col-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.col-md-3 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+//btn
+.btn {
+  height: 3.2rem;
+}
+.btn-group {
+  display: flex;
+  margin-bottom: 3rem;
+  button {
+    width: 15vw;
+  }
+}
+
+//form
+.form-control::placeholder {
+  color: $color-grayish-blue;
+  font-size: 0.8rem;
+}
+.form-control {
+  height: calc(1.8em + 0.75rem + 2px);
+}
+
+//navbar
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}

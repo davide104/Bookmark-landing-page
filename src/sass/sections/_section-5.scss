@@ -1,0 +1,36 @@
+.section-5 {
+  padding-top: 140px;
+  padding-bottom: 110px;
+  .accordion {
+    .card {
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+      background-color: transparent;
+      margin-bottom: 15px;
+      .card-header {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        background-color: transparent;
+        .row {
+          margin: 0px;
+          align-items: center;
+          .col-10 {
+            padding: 0px;
+          }
+          .btn {
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+      .card-body {
+        color: $color-grayish-blue;
+        font-size: 1.1rem;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+  }
+}

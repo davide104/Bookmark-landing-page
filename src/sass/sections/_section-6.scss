@@ -1,0 +1,14 @@
+.section-6-container {
+  background-color: $color-soft-blue;
+}
+.section-6 {
+  h2 {
+    color: white;
+  }
+  .form-group {
+    div:first-child {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

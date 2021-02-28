@@ -1,0 +1,105 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+//image
+@mixin beforeForImage($direction, $bottom: 0) {
+  position: absolute;
+  background-color: $color-soft-blue;
+  z-index: -1;
+  content: "";
+  bottom: $bottom;
+  #{$direction}: 0;
+  width: 49vw;
+  height: 44vw;
+  @include media-breakpoint-up(sm) {
+    min-height: 260px;
+  }
+  @include media-breakpoint-up(md) {
+    max-width: 370px;
+    max-height: 320px;
+  }
+  @include media-breakpoint-up(lg) {
+    min-height: 0px;
+    max-width: 240px;
+    max-height: 212px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 285px;
+    max-height: 255px;
+  }
+}
+@mixin afterForImage($direction, $bottom: 0) {
+  @include media-breakpoint-up(sm) {
+    min-height: 260px;
+  }
+  @include media-breakpoint-up(md) {
+    max-width: 320px;
+    max-height: 320px;
+    #{$direction}: 208px;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 212px;
+    max-height: 212px;
+    min-height: 0px;
+    #{$direction}: 135px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 255px;
+    max-height: 255px;
+    #{$direction}: 155px;
+  }
+}
+
+@mixin backForImage($direction, $height: 44) {
+  //square
+  div:first-child {
+    position: relative;
+    background-color: $color-soft-blue;
+    bottom: 0px;
+    #{$direction}: 0;
+    width: 49vw;
+    max-width: 418px;
+    height: #{$height}vw;
+    @include media-breakpoint-up(lg) {
+      max-width: 260px;
+      max-height: 245px;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 285px;
+      max-height: 255px;
+    }
+  }
+  //circle
+  div:nth-child(2) {
+    $position: 27vw;
+    @if $height != 44vw {
+      $position: #{27 - (($height - 48)/2)}vw;
+    }
+    position: absolute;
+    background-color: $color-soft-blue;
+    bottom: 0px;
+    border-radius: 50%;
+    #{$direction}: $position;
+    width: #{$height}vw;
+    height: #{$height}vw;
+    max-width: 360px;
+    @include media-breakpoint-up(lg) {
+      max-width: 245px;
+      max-height: 245px;
+      $position: 150px;
+      #{$direction}: $position;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 255px;
+      max-height: 255px;
+      #{$direction}: 170px;
+    }
+  }
+}
+
+//border
+@mixin border($color) {
+  border: 2px solid $color;
+  border-left: none;
+  border-right: none;
+}

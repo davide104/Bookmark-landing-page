@@ -1,0 +1,26 @@
+@import "../mixin";
+.image {
+  position: relative;
+  display: flex;
+  margin-bottom: 2.5rem;
+  padding-top: 50px;
+  &.left {
+    @include backForImage(left);
+    justify-content: flex-start;
+    &.height-correction {
+      @include backForImage(left, 52);
+    }
+  }
+  &.right {
+    @include backForImage(right);
+    justify-content: flex-end;
+    &.height-correction {
+      @include backForImage(left, 52);
+    }
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+  }
+}
